@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --blue-green-gradient: linear-gradient(
+    to right,
+    #25aae1,
+    #40e495,
+    #30dd8a,
+    #2bb673
+  );
+
+  --yellow-orange-gradient: linear-gradient(
+    to right,
+    #f5ce62,
+    #e43603,
+    #fa7199,
+    #e85a19
+  );
+
+  --blue-purple-gradient: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2,
+    #6b8dd6,
+    #8e37d7
+  );
+
+  --red-orange-gradient: linear-gradient(
+    to right,
+    #fc6076,
+    #ff9a44,
+    #ef9d43,
+    #e75516
+  );
+
+  --aqua-green-gradient: linear-gradient(
+    to right,
+    #0ba360,
+    #3cba92,
+    #30dd8a,
+    #2bb673
+  );
+
+  --green-yellow-gradient: linear-gradient(
+    to right,
+    #009245,
+    #fcee21,
+    #00a8c5,
+    #d9e021
+  );
+
+  --purple-red-gradient: linear-gradient(
+    to right,
+    #6253e1,
+    #852d91,
+    #a3a1ff,
+    #f24645
+  );
+
+  --grey-purple-gradient: linear-gradient(
+    to right,
+    #29323c,
+    #485563,
+    #2b5876,
+    #4e4376
+  );
+
+  --aqua-blue-gradient: linear-gradient(
+    to right,
+    #25aae1,
+    #4481eb,
+    #04befe,
+    #3f86ed
+  );
+
+  --pink-yellow-gradient: linear-gradient(
+    to right,
+    #ed6ea0,
+    #ec8c69,
+    #f7186a,
+    #fbb03b
+  );
+
+  --meat-red-gradient: linear-gradient(
+    to right,
+    #eb3941,
+    #f15e64,
+    #e14e53,
+    #e2373f
+  );
+}
+
+body {
+  box-sizing: border-box;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1,
+h2,
+p {
+  color: #fff;
+}
+
+.title {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 200;
+}
+
+.data-structure-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #000;
+  text-align: center;
+}
+
+.container {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.node-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: auto;
+}
+
+.nodes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100px;
+  height: 100px;
+  color: #000;
+  font-size: 0.75em;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid #000;
+  padding: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.node-value {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 5px;
+  border: 2px solid #000;
+  outline: none;
+}
+
+.buttons {
+  text-align: center;
+}
+
+.btn-hover {
+  width: 180px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+  height: 45px;
+  text-align: center;
+  border: none;
+  background-size: 300% 100%;
+  border-radius: 50px;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.color-1 {
+  background-image: var(--blue-green-gradient);
+  box-shadow: 0 4px 15px 0 rgba(49, 196, 190, 0.75);
+}
+
+.color-2 {
+  background-image: var(--yellow-orange-gradient);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.color-3 {
+  background-image: var(--blue-purple-gradient);
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+}
+
+.color-4 {
+  background-image: var(--red-orange-gradient);
+  box-shadow: 0 4px 15px 0 rgba(252, 104, 110, 0.75);
+}
+
+.color-5 {
+  background-image: var(--aqua-green-gradient);
+  box-shadow: 0 4px 15px 0 rgba(23, 168, 108, 0.75);
+}
+
+.color-6 {
+  background-image: var(--green-yellow-gradient);
+  box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+.color-7 {
+  background-image: var(--purple-red-gradient);
+  box-shadow: 0 4px 15px 0 rgba(126, 52, 161, 0.75);
+}
+
+.color-8 {
+  background-image: var(--grey-purple-gradient);
+  box-shadow: 0 4px 15px 0 rgba(45, 54, 65, 0.75);
+}
+
+.color-9 {
+  background-image: var(--aqua-blue-gradient);
+  box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+}
+
+.color-10 {
+  background-image: var(--pink-yellow-gradient);
+  box-shadow: 0 4px 15px 0 rgba(236, 116, 149, 0.75);
+}
+
+.color-11 {
+  background-image: var(--meat-red-gradient);
+  box-shadow: 0 5px 15px rgba(242, 97, 103, 0.4);
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
