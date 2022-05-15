@@ -12,8 +12,8 @@ const nodeContainer = document.querySelector(".node-container");
 
 dsTitle.textContent = "Singly Linked List";
 
-export function SLL_pushNode(value) {
-  sll.push(value);
+export function SLL_pushNode(val) {
+  sll.push(val);
 }
 
 export function SLL_popNode() {
@@ -24,8 +24,20 @@ export function SLL_shiftNode() {
   sll.shift();
 }
 
-export function SLL_unshiftNode(value) {
-  sll.unshift(value);
+export function SLL_unshiftNode(val) {
+  sll.unshift(val);
+}
+
+export function SLL_insertNode(index, val) {
+  sll.insert(index, val);
+}
+
+export function SLL_removeNode(index) {
+  sll.remove(index);
+}
+
+export function SLL_findNode(val) {
+  sll.findOne(val);
 }
 
 export function SLL_getNodes() {

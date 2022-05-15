@@ -8,27 +8,47 @@
     <title>Data Structures - Mark Hamori</title>
   </head>
   <body id="app" class="debug-screens container">
-    <h1 class="title">Data Structures</h1>
-    <nav>
-      <div class="buttons">
-        <button class="btn-hover color-1">SLL</button>
-        <button class="btn-hover color-2">DLL</button>
-        <button class="btn-hover color-3">STACKS</button>
-        <button class="btn-hover color-4">QUEUES</button>
-        <button class="btn-hover color-5">PRIORITY QUEUE</button>
-        <button class="btn-hover color-6">HASH TABLES</button>
-        <button class="btn-hover color-7">BINARY TREES</button>
-        <button class="btn-hover color-8">BINARY HEAPS</button>
-        <button class="btn-hover color-9">GRAPHS</button>
-        <button class="btn-hover color-10">EXAMPLE</button>
-        <button class="btn-hover color-11">EXAMPLE</button>
+    <main class="main">
+      <div class="sphere-1">
+        <img src="./src/assets/sphere.svg" alt="sphere-svg" />
       </div>
-    </nav>
-    <div class="">
-      <h2 class="data-structure-title"></h2>
-      <div class="node-container"></div>
-    </div>
-    <div class="methods"></div>
+      <h1 class="title">Data Structures</h1>
+      <nav>
+        <div class="buttons">
+          <button class="btn-hover color-1">SLL</button>
+          <button class="btn-hover color-2">DLL</button>
+          <button class="btn-hover color-3">STACKS</button>
+          <button class="btn-hover color-4">QUEUES</button>
+          <button class="btn-hover color-5">PRIORITY QUEUE</button>
+          <button class="btn-hover color-6">HASH TABLES</button>
+          <button class="btn-hover color-7">BINARY TREES</button>
+          <button class="btn-hover color-8">BINARY HEAPS</button>
+          <button class="btn-hover color-9">GRAPHS</button>
+        </div>
+      </nav>
+
+      <div class="">
+        <h2 class="data-structure-title"></h2>
+        <div class="node-container"></div>
+
+        <div class="data-structures">
+          <div class="ds-structures-inputs">
+            <input id="index" type="number" placeholder="index" />
+            <input id="value" type="number" placeholder="value" />
+          </div>
+          <div class="sll-methods">
+            <div class="sll-buttons">
+              <button class="btn-hover color-1">Push</button>
+              <button class="btn-hover color-1">Pop</button>
+              <button class="btn-hover color-1">Shift</button>
+              <button class="btn-hover color-1">Unshift</button>
+              <button class="btn-hover color-1">Insert</button>
+              <button class="btn-hover color-1">Remove</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

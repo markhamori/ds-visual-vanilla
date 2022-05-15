@@ -5,25 +5,26 @@ import {
   SLL_popNode,
   SLL_shiftNode,
   SLL_unshiftNode,
+  SLL_insertNode,
+  SLL_removeNode,
+  SLL_findNode,
 } from "./methods/sll.js";
 
 const sll = true;
-const methods = document.querySelector(".methods");
+const dsMethods = document.querySelector(".data-structure-methods");
+
+const sphereOne = document.querySelector(".sphere-1");
+
+let randomNum = Math.random() * 6 + 1;
+
+const logKey = (e) => {
+  sphereOne.style.bottom = `${Math.floor((e.clientY / 100) * randomNum)}px`;
+  sphereOne.style.left = `${Math.floor((e.clientX / 100) * randomNum)}px`;
+  sphereOne.style.filter = `blur(${e.clientX / 500}px)`;
+};
+
+document.addEventListener("mousemove", logKey);
 
 if (sll == true) {
   SLL_getNodes();
-
-  const pushBtn = document.createElement("button");
-  const pushInput = document.createElement("input");
-  const pushLabel = document.createElement("label");
-
-  pushBtn.innerText = "Push";
-  pushInput.classList.add("balloon");
-  pushInput.id = "galaxy";
-  pushLabel.setAttribute("for", pushInput.id);
-  pushLabel.htmlFor = "galaxy";
-  pushLabel.innerHTML = "Push";
-
-  methods.appendChild(pushBtn);
-  methods.appendChild(pushInput);
 }
