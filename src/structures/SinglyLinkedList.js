@@ -95,8 +95,8 @@ export default class SinglyLinkedList {
     if (index === 0) return !!this.unshift(val);
 
     var newNode = new Node(val);
-    var temp = prev.next;
     var prev = this.get(index - 1);
+    var temp = prev.next;
     prev.next = newNode;
     newNode.next = temp;
     this.length++;

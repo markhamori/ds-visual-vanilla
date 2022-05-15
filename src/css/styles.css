@@ -107,26 +107,8 @@ p {
   color: #fff;
 }
 
-button {
-  width: 100px;
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  border: none;
-  background-color: #d3d3d3;
-  cursor: pointer;
-}
-
-input {
-  width: 100px;
-  height: 30px;
-  border: none;
-  background-color: #d3d3d3;
-}
-
 .main {
-  display: relative;
+  position: relative;
   overflow: hidden;
 }
 
@@ -134,10 +116,8 @@ input {
   position: absolute;
   bottom: 0px;
   left: 0px;
-  background-image: url("../assets/sphere.svg");
-  border-radius: 50%;
+  background: transparent;
   z-index: -50;
-  box-shadow: 0 0 10px #cccccc, 0 0 40px #cfcfcf, 0 0 80px #949494;
 }
 
 .title {
@@ -225,7 +205,7 @@ input {
 }
 
 .ds-structures-inputs input {
-  width: 180px;
+  width: 160px;
   color: #000;
   font-size: 12px;
   font-weight: 600;
@@ -249,6 +229,10 @@ input {
   color: #000;
 }
 
+.ds-structures-inputs input:focus::placeholder {
+  color: transparent;
+}
+
 .sll-methods {
   display: flex;
   flex-direction: row;
@@ -259,6 +243,37 @@ input {
 
 .buttons {
   text-align: center;
+}
+
+.alert {
+  background-color: #29323c;
+  position: absolute;
+  right: -500px;
+  top: 1rem;
+  display: flex;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  font-size: 1rem;
+  text-align: center;
+  border-radius: 50px;
+  text-transform: uppercase;
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+button {
+  position: relative;
+}
+
+.button-requirement {
+  width: 100%;
+  position: absolute;
+  bottom: 8px;
+  left: 0%;
+  transform: translateY(50%);
+  color: #000;
 }
 
 .btn-hover {

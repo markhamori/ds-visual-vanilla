@@ -8,10 +8,10 @@
     <title>Data Structures - Mark Hamori</title>
   </head>
   <body id="app" class="debug-screens container">
+    <div class="sphere-1">
+      <img src="./src/assets/sphere.svg" alt="sphere-svg" />
+    </div>
     <main class="main">
-      <div class="sphere-1">
-        <img src="./src/assets/sphere.svg" alt="sphere-svg" />
-      </div>
       <h1 class="title">Data Structures</h1>
       <nav>
         <div class="buttons">
@@ -30,6 +30,7 @@
       <div class="">
         <h2 class="data-structure-title"></h2>
         <div class="node-container"></div>
+        <p class="alert"></p>
 
         <div class="data-structures">
           <div class="ds-structures-inputs">
@@ -38,12 +39,23 @@
           </div>
           <div class="sll-methods">
             <div class="sll-buttons">
-              <button class="btn-hover color-1">Push</button>
-              <button class="btn-hover color-1">Pop</button>
-              <button class="btn-hover color-1">Shift</button>
-              <button class="btn-hover color-1">Unshift</button>
-              <button class="btn-hover color-1">Insert</button>
-              <button class="btn-hover color-1">Remove</button>
+              <button id="sll-push" class="btn-hover color-1">
+                Push<span class="button-requirement">Value</span>
+              </button>
+              <button id="sll-pop" class="btn-hover color-1">Pop</button>
+              <button id="sll-shift" class="btn-hover color-1">Shift</button>
+              <button id="sll-unshift" class="btn-hover color-1">
+                Unshift<span class="button-requirement">Value</span>
+              </button>
+              <button id="sll-insert" class="btn-hover color-1">
+                Insert<span class="button-requirement">Index, Value</span>
+              </button>
+              <button id="sll-remove" class="btn-hover color-1">
+                Remove<span class="button-requirement">Index</span>
+              </button>
+              <button id="sll-find" class="btn-hover color-1">
+                Find<span class="button-requirement">Value</span>
+              </button>
             </div>
           </div>
         </div>
