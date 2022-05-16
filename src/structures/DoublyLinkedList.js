@@ -147,14 +147,14 @@ export default class DoublyLinkedList {
     this.length--;
     return foundNode;
   }
+
+  findAll() {
+    const elements = [];
+    let currentNode = this.head;
+    while (currentNode) {
+      elements.push(currentNode);
+      currentNode = currentNode.next;
+    }
+    return elements;
+  }
 }
-
-var list = new DoublyLinkedList();
-list.push("Harry");
-list.push("Ron");
-list.push("Hermione");
-list.push("Dumbledor");
-list.push("Gollum");
-
-console.log(list.remove(1));
-console.log(list);
