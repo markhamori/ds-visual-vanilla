@@ -18,6 +18,7 @@ const nodeContainer = document.querySelector(".node-container");
 const alert = document.querySelector(".alert");
 const inputValue = document.getElementById("value");
 const inputIndex = document.getElementById("index");
+const dataStructures = document.querySelect(".data-structures");
 
 const logKey = (e) => {
   sphereOne.style.bottom = `${Math.floor((e.clientY / 100) * randomNum)}px`;
@@ -26,6 +27,34 @@ const logKey = (e) => {
 };
 
 document.addEventListener("mousemove", logKey);
+
+if (sll === 1337) {
+  const template = `
+  <div class="dll-methods">
+    <div class="dll-buttons">
+      <button id="dll-push" class="btn-hover color-2">
+        Push<span class="button-requirement">Value</span>
+      </button>
+      <button id="dll-pop" class="btn-hover color-2">Pop</button>
+      <button id="dll-shift" class="btn-hover color-2">Shift</button>
+      <button id="dll-unshift" class="btn-hover color-2">
+        Unshift<span class="button-requirement">Value</span>
+      </button>
+      <button id="dll-insert" class="btn-hover color-2">
+        Insert<span class="button-requirement">Index, Value</span>
+      </button>
+      <button id="dll-remove" class="btn-hover color-2">
+        Remove<span class="button-requirement">Index</span>
+      </button>
+      <button id="dll-find" class="btn-hover color-2">
+        Find<span class="button-requirement">Value</span>
+      </button>
+    </div>
+  </div>
+  `;
+
+  dataStructures.append(template);
+}
 
 if (sll == true) {
   SLL_getNodes();
