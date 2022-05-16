@@ -13,31 +13,31 @@ const nodeContainer = document.querySelector(".node-container");
 dsTitle.textContent = "Singly Linked List";
 
 export function SLL_pushNode(val) {
-  sll.push(val);
+  return sll.push(val);
 }
 
 export function SLL_popNode() {
-  sll.pop();
+  return sll.pop();
 }
 
 export function SLL_shiftNode() {
-  sll.shift();
+  return sll.shift();
 }
 
 export function SLL_unshiftNode(val) {
-  sll.unshift(val);
+  return sll.unshift(val);
 }
 
 export function SLL_insertNode(index, val) {
-  sll.insert(index, val);
+  return sll.insert(index, val);
 }
 
 export function SLL_removeNode(index) {
-  sll.remove(index);
+  return sll.remove(index);
 }
 
-export function SLL_findNode(val) {
-  sll.findOne(val);
+export function SLL_getNode(index) {
+  return sll.get(index);
 }
 
 export function SLL_getNodes() {

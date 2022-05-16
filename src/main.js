@@ -7,18 +7,18 @@ import {
   SLL_unshiftNode,
   SLL_insertNode,
   SLL_removeNode,
-  SLL_findNode,
+  SLL_getNode,
 } from "./methods/sll.js";
-
-const sll = true;
-let randomNum = Math.random() * 6 + 1;
 
 const sphereOne = document.querySelector(".sphere-1");
 const nodeContainer = document.querySelector(".node-container");
 const alert = document.querySelector(".alert");
 const inputValue = document.getElementById("value");
 const inputIndex = document.getElementById("index");
-const dataStructures = document.querySelect(".data-structures");
+const sllBtn = document.getElementById("sll");
+
+let sll = true;
+let randomNum = Math.random() * 6 + 1;
 
 const logKey = (e) => {
   sphereOne.style.bottom = `${Math.floor((e.clientY / 100) * randomNum)}px`;
@@ -27,34 +27,10 @@ const logKey = (e) => {
 };
 
 document.addEventListener("mousemove", logKey);
-
-if (sll === 1337) {
-  const template = `
-  <div class="dll-methods">
-    <div class="dll-buttons">
-      <button id="dll-push" class="btn-hover color-2">
-        Push<span class="button-requirement">Value</span>
-      </button>
-      <button id="dll-pop" class="btn-hover color-2">Pop</button>
-      <button id="dll-shift" class="btn-hover color-2">Shift</button>
-      <button id="dll-unshift" class="btn-hover color-2">
-        Unshift<span class="button-requirement">Value</span>
-      </button>
-      <button id="dll-insert" class="btn-hover color-2">
-        Insert<span class="button-requirement">Index, Value</span>
-      </button>
-      <button id="dll-remove" class="btn-hover color-2">
-        Remove<span class="button-requirement">Index</span>
-      </button>
-      <button id="dll-find" class="btn-hover color-2">
-        Find<span class="button-requirement">Value</span>
-      </button>
-    </div>
-  </div>
-  `;
-
-  dataStructures.append(template);
-}
+sllBtn.addEventListener("click", () => {
+  nodeContainer.innerHTML = "";
+  SLL_getNodes();
+});
 
 if (sll == true) {
   SLL_getNodes();
@@ -133,30 +109,49 @@ if (sll == true) {
 
   const remove = document.getElementById("sll-remove");
   remove.addEventListener("click", () => {
-    SLL_removeNode(Number(inputIndex.value));
-    nodeContainer.innerHTML = "";
-    alert.innerText = `Node removed at the index: ${Number(inputIndex.value)}!`;
-    alert.style.right = "2rem";
-    inputValue.value = "";
-    inputIndex.value = "";
-    setTimeout(() => {
-      alert.style.right = "-500px";
-    }, 3000);
-    SLL_getNodes();
+    if (!SLL_removeNode(Number(inputIndex.value))) {
+      alert.innerText = `Linked List is empty`;
+      alert.style.right = "2rem";
+      inputValue.value = "";
+      inputIndex.value = "";
+      setTimeout(() => {
+        alert.style.right = "-500px";
+      }, 3000);
+    } else {
+      nodeContainer.innerHTML = "";
+      alert.innerText = `Node removed at the index: ${Number(
+        inputIndex.value
+      )}!`;
+      alert.style.right = "2rem";
+      inputValue.value = "";
+      inputIndex.value = "";
+      setTimeout(() => {
+        alert.style.right = "-500px";
+      }, 3000);
+      SLL_getNodes();
+    }
   });
 
-  const find = document.getElementById("sll-find");
-  find.addEventListener("click", () => {
-    console.log(SLL_findNode(Number(inputValue.value)));
-
-    nodeContainer.innerHTML = "";
-    alert.innerText = `Node found. It's in the linked list !`;
-    alert.style.right = "2rem";
-    inputValue.value = "";
-    inputIndex.value = "";
-    setTimeout(() => {
-      alert.style.right = "-500px";
-    }, 3000);
-    SLL_getNodes();
+  const get = document.getElementById("sll-get");
+  get.addEventListener("click", () => {
+    if (!SLL_getNode(Number(inputIndex.value))) {
+      alert.innerText = `There is no node at index: ${inputIndex.value}`;
+      alert.style.right = "2rem";
+      inputValue.value = "";
+      inputIndex.value = "";
+      setTimeout(() => {
+        alert.style.right = "-500px";
+      }, 3000);
+    } else {
+      nodeContainer.innerHTML = "";
+      alert.innerText = `Node found at index: ${inputIndex.value}`;
+      alert.style.right = "2rem";
+      inputValue.value = "";
+      inputIndex.value = "";
+      setTimeout(() => {
+        alert.style.right = "-500px";
+      }, 3000);
+      SLL_getNodes();
+    }
   });
 }

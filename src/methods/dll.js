@@ -13,31 +13,31 @@ const nodeContainer = document.querySelector(".node-container");
 dsTitle.textContent = "Doubly Linked List";
 
 export function DLL_pushNode(val) {
-  dll.push(val);
+  return dll.push(val);
 }
 
 export function DLL_popNode() {
-  dll.pop();
+  return dll.pop();
 }
 
 export function DLL_getNode(index) {
-  dll.get(index);
+  return dll.get(index);
 }
 
 export function DLL_shiftNode() {
-  dll.shift();
+  return dll.shift();
 }
 
 export function DLL_unshiftNode(val) {
-  dll.unshift(val);
+  return dll.unshift(val);
 }
 
 export function DLL_insertNode(index, val) {
-  dll.insert(index, val);
+  return dll.insert(index, val);
 }
 
 export function DLL_removeNode(index) {
-  dll.remove(index);
+  return dll.remove(index);
 }
 
 export function DLL_getNodes() {

@@ -99,8 +99,8 @@ export default class SinglyLinkedList {
     var temp = prev.next;
     prev.next = newNode;
     newNode.next = temp;
-    this.length++;
 
+    this.length++;
     return true;
   }
 
@@ -110,6 +110,7 @@ export default class SinglyLinkedList {
     if (index === this.length - 1) return this.pop();
 
     var prevNode = this.get(index - 1);
+    console.log(prevNode);
     var removed = prevNode.next;
     prevNode.next = removed.next;
     this.length--;
