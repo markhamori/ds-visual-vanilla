@@ -36,4 +36,14 @@ export default class Stack {
     this.size--;
     return temp.value;
   }
+
+  findAll() {
+    const elements = [];
+    let currentNode = this.first;
+    while (currentNode.next) {
+      elements.push(currentNode);
+      currentNode = currentNode.next;
+    }
+    return elements;
+  }
 }

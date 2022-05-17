@@ -10,6 +10,8 @@ import {
   SLL_getNode,
 } from "./methods/sll.js";
 
+import { STACKS_pushNode, STACKS_popNode } from "./methods/stacks.js";
+
 const sphereOne = document.querySelector(".sphere-1");
 const nodeContainer = document.querySelector(".node-container");
 const alert = document.querySelector(".alert");
@@ -155,3 +157,5 @@ if (sll == true) {
     }
   });
 }
+
+console.log(STACKS_pushNode(50));
