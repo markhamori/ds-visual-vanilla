@@ -47,11 +47,15 @@ export function DLL_getNodes() {
     div.classList.add(`node`);
 
     if (dll.findAll()[0].val === node.val) {
-      div.innerText = `${node.val} \n Head \n Next: ${node.next.val}`;
+      div.innerText = `${node.val} \n Head \n Prev: ${null} \n Next: ${
+        node.next.val
+      }`;
     } else if (dll.findAll()[dll.findAll().length - 1].val === node.val) {
-      div.innerText = `${node.val} \n Tail \n Next: ${null}`;
+      div.innerText = `${node.val} \n Tail \n Prev: ${
+        node.prev.val
+      } \n Next: ${null}`;
     } else {
-      div.innerText = `${node.val} \n Next: ${node.next.val}`;
+      div.innerText = `${node.val} \n Prev: ${node.prev.val} \n Next: ${node.next.val}`;
     }
     const arrow = document.createElement("div");
     arrow.classList.add("double-arrow");
