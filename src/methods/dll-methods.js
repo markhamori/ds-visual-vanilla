@@ -43,8 +43,8 @@ export function DLL_removeNode(index) {
 export function DLL_getNodes() {
   for (const node of dll.findAll()) {
     const div = document.createElement("div");
-    div.classList.add("nodes");
-    div.classList.add(`node-${node.val}`);
+    div.classList.add("lists");
+    div.classList.add(`node`);
 
     if (dll.findAll()[0].val === node.val) {
       div.innerText = `${node.val} \n Head \n Next: ${node.next.val}`;
@@ -54,7 +54,7 @@ export function DLL_getNodes() {
       div.innerText = `${node.val} \n Next: ${node.next.val}`;
     }
     const arrow = document.createElement("div");
-    arrow.classList.add("single-arrow");
+    arrow.classList.add("double-arrow");
 
     nodeContainer.append(div);
     if (node.next != null) nodeContainer.append(arrow);

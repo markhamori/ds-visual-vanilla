@@ -1,6 +1,6 @@
 class Node {
-  constructor(value) {
-    this.value = value;
+  constructor(val) {
+    this.val = val;
     this.next = null;
   }
 }
@@ -12,8 +12,8 @@ export default class Stack {
     this.size = 0;
   }
 
-  push(value) {
-    var newNode = new Node(value);
+  push(val) {
+    var newNode = new Node(val);
     if (!this.first) {
       this.first = newNode;
       this.last = newNode;
@@ -34,13 +34,13 @@ export default class Stack {
     }
     this.first = this.first.next;
     this.size--;
-    return temp.value;
+    return temp.val;
   }
 
   findAll() {
     const elements = [];
     let currentNode = this.first;
-    while (currentNode.next) {
+    while (currentNode) {
       elements.push(currentNode);
       currentNode = currentNode.next;
     }

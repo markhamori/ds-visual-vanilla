@@ -7,10 +7,7 @@ sll.push(20);
 sll.push(8);
 sll.push(30);
 
-const dsTitle = document.querySelector(".data-structure-title");
 const nodeContainer = document.querySelector(".node-container");
-
-dsTitle.textContent = "Singly Linked List";
 
 export function SLL_pushNode(val) {
   return sll.push(val);
@@ -43,8 +40,8 @@ export function SLL_getNode(index) {
 export function SLL_getNodes() {
   for (const node of sll.findAll()) {
     const div = document.createElement("div");
-    div.classList.add("nodes");
-    div.classList.add(`node-${node.val}`);
+    div.classList.add("lists");
+    div.classList.add(`node`);
 
     if (sll.findAll()[0].val === node.val) {
       div.innerText = `${node.val} \n Head \n Next: ${node.next.val}`;

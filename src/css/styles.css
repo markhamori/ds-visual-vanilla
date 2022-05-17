@@ -141,6 +141,13 @@ p {
   width: 1.5rem;
 }
 
+.double-arrow {
+  background-image: url("./src/assets/arrow-right-arrow-left-solid.svg");
+  background-repeat: no-repeat;
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
 .container {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -156,7 +163,7 @@ p {
   height: auto;
 }
 
-.nodes {
+.lists {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -170,8 +177,44 @@ p {
   font-size: 0.75em;
   font-weight: 300;
   text-align: center;
-  border-radius: 50%;
-  border: 2px solid #000;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 0.5rem;
+  transition: all 0.5s ease;
+}
+
+.stack-container {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: start;
+  width: 100%;
+  height: auto;
+}
+
+.stacks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  width: 100px;
+  height: 100px;
+  color: #000;
+  font-size: 0.75em;
+  font-weight: 300;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   padding: 0.5rem;
   transition: all 0.5s ease;
 }
