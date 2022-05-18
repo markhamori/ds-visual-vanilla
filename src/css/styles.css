@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 :root {
   --blue-green-gradient: linear-gradient(
     to right,
@@ -91,14 +97,11 @@
 }
 
 body {
-  box-sizing: border-box;
-  margin-left: 2rem;
-  margin-right: 2rem;
+  position: relative;
   font-family: "Poppins", sans-serif;
-  background-color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 h1,
@@ -108,8 +111,43 @@ p {
 }
 
 .main {
-  position: relative;
   overflow: hidden;
+}
+
+nav {
+  position: absolute;
+  right: -360px;
+  bottom: 0;
+  display: flex;
+  height: 100vh;
+  width: 380px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  transition: all 0.5s ease;
+}
+
+nav:hover {
+  right: 0;
+}
+
+.nav__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+
+.nav__title {
+  font-size: 2rem;
+  text-align: center;
+  color: #000;
+  font-weight: 200;
+}
+
+.nav__buttons {
+  margin: 0 auto;
+  text-align: center;
 }
 
 .sphere-1 {
@@ -118,13 +156,6 @@ p {
   left: 0px;
   background: transparent;
   z-index: -50;
-}
-
-.title {
-  font-size: 2.75rem;
-  text-align: center;
-  color: #000;
-  font-weight: 200;
 }
 
 .data-structure-title {
@@ -282,10 +313,6 @@ p {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-}
-
-.buttons {
-  text-align: center;
 }
 
 .alert {
