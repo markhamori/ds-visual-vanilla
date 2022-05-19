@@ -102,6 +102,7 @@ body {
   height: 100vh;
   margin: 0;
   overflow: hidden;
+  box-sizing: border-box;
 }
 
 h1,
@@ -111,6 +112,10 @@ p {
 }
 
 .main {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -125,13 +130,11 @@ nav {
   box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
     rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
   transition: all 0.5s ease;
-}
-
-nav:hover {
-  right: 0;
+  z-index: 10;
 }
 
 .nav__content {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -150,6 +153,23 @@ nav:hover {
   text-align: center;
 }
 
+.nav__open {
+  position: absolute;
+  left: -45px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.nav__open img {
+  width: 25px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.nav__open img:hover {
+  opacity: 80%;
+}
+
 .sphere-1 {
   position: absolute;
   bottom: 0px;
@@ -159,9 +179,12 @@ nav:hover {
 }
 
 .data-structure-title {
-  font-size: 1.5rem;
+  position: absolute;
+  left: 2rem;
+  top: 0;
+  font-size: 100px;
   font-weight: 600;
-  color: #000;
+  color: rgba(0, 0, 0, 0.03);
   text-align: center;
 }
 
@@ -278,7 +301,7 @@ nav:hover {
   justify-content: center;
 }
 
-.ds-structures-inputs input {
+input {
   width: 160px;
   color: #000;
   font-size: 12px;
@@ -288,22 +311,22 @@ nav:hover {
   margin-right: 0.5rem;
   margin-bottom: 1rem;
   height: 35px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 50px;
   background-color: white;
   text-transform: uppercase;
   outline: none;
 }
 
-.ds-structures-inputs input:focus {
-  border: 2px solid rgb(39, 100, 100);
+input:focus {
+  border: 1px solid rgb(39, 100, 100);
 }
 
-.ds-structures-inputs input::placeholder {
+input::placeholder {
   color: #000;
 }
 
-.ds-structures-inputs input:focus::placeholder {
+input:focus::placeholder {
   color: transparent;
 }
 
