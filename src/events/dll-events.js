@@ -22,11 +22,65 @@ export default function DLL_events() {
   dataStructures.innerHTML = "";
   stackContainer.innerHTML = "";
   nodeContainer.innerHTML = "";
-
   DLL_getNodes();
 
-  const push = document.getElementById("dll-push");
-  push.addEventListener("click", () => {
+  const dllMethods = document.createElement("div");
+  dllMethods.classList.add("dll-methods");
+  dataStructures.appendChild(dllMethods);
+  const dllButtons = document.createElement("div");
+  dllButtons.classList.add("dll-buttons");
+  dllMethods.appendChild(dllButtons);
+
+  const dllPush = document.createElement("button");
+  dllPush.classList.add("btn-hover");
+  dllPush.classList.add("color-2");
+  dllPush.setAttribute("id", "dll-push");
+  dllPush.innerText = "Push";
+  dllButtons.appendChild(dllPush);
+
+  const dllPop = document.createElement("button");
+  dllPop.classList.add("btn-hover");
+  dllPop.classList.add("color-2");
+  dllPop.setAttribute("id", "dll-pop");
+  dllPop.innerText = "Pop";
+  dllButtons.appendChild(dllPop);
+
+  const dllShift = document.createElement("button");
+  dllShift.classList.add("btn-hover");
+  dllShift.classList.add("color-2");
+  dllShift.setAttribute("id", "dll-shift");
+  dllShift.innerText = "Shift";
+  dllButtons.appendChild(dllShift);
+
+  const dllUnshift = document.createElement("button");
+  dllUnshift.classList.add("btn-hover");
+  dllUnshift.classList.add("color-2");
+  dllUnshift.setAttribute("id", "dll-unshift");
+  dllUnshift.innerText = "Unshift";
+  dllButtons.appendChild(dllUnshift);
+
+  const dllInsert = document.createElement("button");
+  dllInsert.classList.add("btn-hover");
+  dllInsert.classList.add("color-2");
+  dllInsert.setAttribute("id", "dll-insert");
+  dllInsert.innerText = "Insert";
+  dllButtons.appendChild(dllInsert);
+
+  const dllRemove = document.createElement("button");
+  dllRemove.classList.add("btn-hover");
+  dllRemove.classList.add("color-2");
+  dllRemove.setAttribute("id", "dll-remove");
+  dllRemove.innerText = "Remove";
+  dllButtons.appendChild(dllRemove);
+
+  const dllGet = document.createElement("button");
+  dllGet.classList.add("btn-hover");
+  dllGet.classList.add("color-2");
+  dllGet.setAttribute("id", "dll-get");
+  dllGet.innerText = "Get";
+  dllButtons.appendChild(dllGet);
+
+  dllPush.addEventListener("click", () => {
     DLL_pushNode(Number(inputValue.value));
     nodeContainer.innerHTML = "";
     alert.innerText = `${Number(inputValue.value)} added to the tail!`;
@@ -39,8 +93,7 @@ export default function DLL_events() {
     DLL_getNodes();
   });
 
-  const pop = document.getElementById("dll-pop");
-  pop.addEventListener("click", () => {
+  dllPop.addEventListener("click", () => {
     DLL_popNode();
     nodeContainer.innerHTML = "";
     alert.innerText = "Tail removed!";
@@ -53,8 +106,7 @@ export default function DLL_events() {
     DLL_getNodes();
   });
 
-  const shift = document.getElementById("dll-shift");
-  shift.addEventListener("click", () => {
+  dllShift.addEventListener("click", () => {
     DLL_shiftNode();
     nodeContainer.innerHTML = "";
     alert.innerText = "Head removed!";
@@ -67,8 +119,7 @@ export default function DLL_events() {
     DLL_getNodes();
   });
 
-  const unshift = document.getElementById("dll-unshift");
-  unshift.addEventListener("click", () => {
+  dllUnshift.addEventListener("click", () => {
     DLL_unshiftNode(Number(inputValue.value));
     nodeContainer.innerHTML = "";
     alert.innerText = `${Number(inputValue.value)} added to the head!`;
@@ -81,8 +132,7 @@ export default function DLL_events() {
     DLL_getNodes();
   });
 
-  const insert = document.getElementById("dll-insert");
-  insert.addEventListener("click", () => {
+  dllInsert.addEventListener("click", () => {
     DLL_insertNode(Number(inputIndex.value), Number(inputValue.value));
     nodeContainer.innerHTML = "";
     alert.innerText = `${Number(inputValue.value)} added at the index: ${
@@ -97,8 +147,7 @@ export default function DLL_events() {
     DLL_getNodes();
   });
 
-  const remove = document.getElementById("dll-remove");
-  remove.addEventListener("click", () => {
+  dllRemove.addEventListener("click", () => {
     if (!DLL_removeNode(Number(inputIndex.value))) {
       alert.innerText = `Linked List is empty`;
       alert.style.right = "2rem";
@@ -122,8 +171,7 @@ export default function DLL_events() {
     }
   });
 
-  const get = document.getElementById("dll-get");
-  get.addEventListener("click", () => {
+  dllGet.addEventListener("click", () => {
     if (!DLL_getNode(Number(inputIndex.value))) {
       alert.innerText = `There is no node at index: ${inputIndex.value}`;
       alert.style.right = "2rem";
